@@ -30,10 +30,6 @@ a {
   position: relative;
   transition: opacity 300ms ease;
 }
-.about-me__link {
-  display: inline-block;
-  padding-bottom: 4px;
-}
 
 i:hover {
   opacity: 0.7;
@@ -166,7 +162,6 @@ nav {
   overflow: hidden;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
   margin-bottom: 28px;
-
   animation: animate-profile-picture 800ms 200ms backwards;
 }
 
@@ -186,8 +181,8 @@ nav {
   width: 100%;
 
   /* Improving my own picture */
-  transform: scale(1);
-  padding-bottom: 8px;
+  transform: scale(1.5);
+  padding-top: 8px;
 }
 
 .about-me__info--title {
@@ -264,11 +259,10 @@ nav {
   max-width: 100px;
   transition: all 300ms;
 }
-
 .language:hover .language__img {
   filter: brightness(80%);
   opacity: 0.86;
-  transform: scale(1.1);
+  transform: scale(0.9);
 }
 
 .language {
@@ -277,7 +271,6 @@ nav {
   justify-content: center;
   position: relative;
 }
-
 .language__img--wrapper {
   display: flex;
   justify-content: center;
@@ -297,10 +290,9 @@ nav {
   bottom: 0;
   transform: scale(0);
   transition: all 300ms;
-  font-size: 16px;
+  font-size: 20px;
   opacity: 0;
 }
-
 .language:hover .language__name {
   transform: scale(1);
   opacity: 1;
@@ -328,7 +320,6 @@ nav {
   overflow: hidden;
   position: relative;
 }
-
 .project__wrapper:before {
   content: "";
   position: absolute;
@@ -342,12 +333,10 @@ nav {
   z-index: 2;
   transform: translateY(100%);
 }
-
 .project:hover .project__wrapper:before {
   transform: translateY(0);
   opacity: 0.7;
 }
-
 .project:hover .project__img {
   transform: scale(1.07);
   filter: blur(5px);
@@ -371,34 +360,6 @@ nav {
   z-index: 3;
   opacity: 0;
   transition: transform 450ms, opacity 300ms;
-}
-
-.project__description--links {
-  position: absolute;
-  left: 90px;
-  bottom: 24px;
-  z-index: 4;
-  opacity: 0;
-  transform: translateY(16px);
-  transition: transform 300ms ease, opacity 300ms ease;
-}
-
-.project:hover .project__description--links {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Place links under the description, not pinned to the card bottom */
-.project__description .project__description--links {
-  position: static;
-  left: auto;
-  bottom: auto;
-  z-index: auto;
-  opacity: inherit;
-  transform: none;
-  margin-top: 16px;
-  display: flex;
-  gap: 16px;
 }
 
 .project__description--title {
@@ -446,6 +407,7 @@ footer {
 .footer__logo--img {
   width: 70px;
   height: 70px;
+  border-radius: 50%;
 }
 
 .footer__social--link,
@@ -498,9 +460,6 @@ footer {
   .project__description {
     left: 30px;
     padding-right: 30px;
-  }
-  .project__description--links {
-    left: 30px;
   }
 }
 
